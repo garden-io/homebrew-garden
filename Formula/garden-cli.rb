@@ -3,8 +3,8 @@ require "language/node"
 class GardenCli < Formula
   desc "A full-featured development framework for containers and serverless"
   homepage "https://github.com/garden-io/garden"
-  url "https://registry.npmjs.org/garden-cli/-/garden-cli-0.3.0.tgz"
-  sha256 "8b41365bbee1b0334a7589800f5636436b3905fe3f87970991e3b77bd94805a0"
+  url "https://registry.npmjs.org/garden-cli/-/garden-cli-0.3.1.tgz"
+  sha256 "ae6f4576332d3c35cfe38fa95e01ad5ec50b30797a27020aec3a3dd4af7a3da2"
 
   depends_on "node"
   depends_on "rsync"
