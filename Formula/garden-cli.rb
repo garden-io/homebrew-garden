@@ -3,13 +3,12 @@ require "language/node"
 class GardenCli < Formula
   desc "A full-featured development framework for containers and serverless"
   homepage "https://github.com/garden-io/garden"
-  url "https://registry.npmjs.org/garden-cli/-/garden-cli-0.7.0.tgz"
-  sha256 "e89b6d722fc216ff7e9c035f3c282834ac9951e447378b070defb7cac0794982"
+  url "https://registry.npmjs.org/garden-cli/-/garden-cli-0.8.0.tgz"
+  sha256 "882092a2e18298f28728f5cc9db235a025afbb0a691904c32e74501227c13555"
 
   depends_on "node"
   depends_on "rsync"
-  depends_on "stern"
-  depends_on "python" => :build
+
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
