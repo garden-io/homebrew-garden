@@ -1,20 +1,19 @@
-require "language/node"
-
 class GardenCli < Formula
-  desc "A full-featured development framework for containers and serverless"
-  homepage "https://github.com/garden-io/garden"
-  url "https://registry.npmjs.org/garden-cli/-/garden-cli-0.8.1.tgz"
-  sha256 "0f225757885374c6538a6d926eb78d6e4939a5c593560028b6f975edfc9e08b9"
+  desc "Development engine for Kubernetes"
+  homepage "https://garden.io"
+  url "https://github.com/garden-io/garden/releases/download/v0.9.0/garden-v0.9.0-macos-amd64.tar.gz"
+  version "0.9.0"
+  sha256 "613ed812aa2dc01d21b0c9abde33bc12e9b9c8dd5ef38711ccdd56183c9f6512"
 
-  depends_on "node"
   depends_on "rsync"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    libexec.install "garden", "fse.node", "static"
+    bin.install_symlink libexec/"garden"
   end
 
   test do
-    # add a meaningful test here
+    # just make sure the command works
+    system bin/"garden", "--help"
   end
 end
