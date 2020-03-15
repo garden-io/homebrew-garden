@@ -1,9 +1,9 @@
 class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
-  url "https://github.com/garden-io/garden/releases/download/v0.11.7/garden-v0.11.7-macos-amd64.tar.gz"
-  version "0.11.7"
-  sha256 "58e3f67939cba78d362a9a722c4903ace1853348e99b048ee71f29fa4b244778"
+  url "https://github.com/garden-io/garden/releases/download/v0.11.8/garden-v0.11.8-macos-amd64.tar.gz"
+  version "0.11.8"
+  sha256 "805ce8b02cf10171a861534cdc5c9fb7dcb249ff8c0b6072ee72d34f51b8a387"
 
   depends_on "rsync"
 
