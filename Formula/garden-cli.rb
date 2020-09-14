@@ -1,14 +1,14 @@
 class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
-  url "https://github.com/garden-io/garden/releases/download/v0.12.3/garden-v0.12.3-macos-amd64.tar.gz"
-  version "0.12.3"
-  sha256 "a1d7fa9b72ca568a921d98b254a7f94df90d62e0e9647f28cb89050d4349c4af"
+  url "https://github.com/garden-io/garden/releases/download/0.12.5/garden-0.12.5-macos-amd64.tar.gz"
+  version "0.12.5"
+  sha256 "c044d2948ca3889aabf17cd4e12729a7840a73d59c6b41255ff8db6e69ebcaa2"
 
   depends_on "rsync"
 
   def install
-    libexec.install "garden", "fsevents.node", "static", "node_sqlite3.node"
+    libexec.install "garden", "fsevents.node", "static", "better_sqlite3.node"
     bin.install_symlink libexec/"garden"
   end
 
