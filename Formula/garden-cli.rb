@@ -1,7 +1,7 @@
 class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
-  url "https://github.com/garden-io/garden/releases/download/0.12.46/garden-0.12.46-macos-amd64.tar.gz"
+  url "https://download.garden.io/core/0.12.46/garden-0.12.46-macos-amd64.tar.gz"
   version "0.12.46"
   sha256 "7c1b1d8642779d2433934d847e929fe6bd5711446ae432fa2dc5048b3a8ee5f4"
 
