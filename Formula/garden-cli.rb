@@ -1,14 +1,20 @@
 class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
-  url "https://download.garden.io/core/0.13.13/garden-0.13.13-macos-amd64.tar.gz"
-  version "0.13.13"
-  sha256 "45e7d55a1657b9d4af43c8a508fdfb0e1c48379829586446dba243a515fa434c"
 
-  depends_on "rsync"
+  version "edge}"
+
+  # Determine architecture
+  if Hardware::CPU.arm?
+    url "https://download.garden.io/core/edge/garden-edge-macos-arm64.tar.gz"
+    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  else
+    url "https://download.garden.io/core/edge/garden-edge-macos-amd64.tar.gz"
+    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  end
 
   def install
-    libexec.install "garden", "fsevents.node", "static"
+    libexec.install "garden", "fsevents.node", "static", "pty.node"
     bin.install_symlink libexec/"garden"
   end
 
