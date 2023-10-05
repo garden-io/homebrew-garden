@@ -2,15 +2,15 @@ class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
 
-  version "0.13.16"
+  version "edge-bonsai"
 
   # Determine architecture
   if Hardware::CPU.arm?
-    url "https://download.garden.io/core/0.13.16/garden-0.13.16-macos-arm64.tar.gz"
-    sha256 "50b39d5a9caa77c0ad1039e4d0c7a4ae8433030230e17c385d10c0c0be6725b9"
+    url "https://download.garden.io/core/edge-bonsai/garden-edge-bonsai-macos-arm64.tar.gz"
+    sha256 "b87dde20d46d50a78dd170f06f99dd0cd28aee8429b6062396547f3bd99d09ed"
   else
-    url "https://download.garden.io/core/0.13.16/garden-0.13.16-macos-amd64.tar.gz"
-    sha256 "b7d17ce2c46f9dd3dadec268d8931f88127124568e0524588c64e640234de3e2"
+    url "https://download.garden.io/core/edge-bonsai/garden-edge-bonsai-macos-amd64.tar.gz"
+    sha256 "e19ea708e6efe50bac31624d3b6c3b07bdc4bf677cd4d1d06ab0fd3c9f54f322"
   end
 
   def install
