@@ -2,15 +2,15 @@ class GardenCli < Formula
   desc "Development engine for Kubernetes"
   homepage "https://garden.io"
 
-  version "0.14.3"
+  version "0.14.4"
 
   # Determine architecture
   if Hardware::CPU.arm?
-    url "https://download.garden.io/core/0.14.3/garden-0.14.3-macos-arm64.tar.gz"
-    sha256 "0cc93785823b6cf9fe633681029f7fc567ce8a1344c823b4f331ac1477899b31"
+    url "https://download.garden.io/core/0.14.4/garden-0.14.4-macos-arm64.tar.gz"
+    sha256 "6ebfa9a40448b72edcac279db745d9dfbc779975b8268ac61486f19b18d10b86"
   else
-    url "https://download.garden.io/core/0.14.3/garden-0.14.3-macos-amd64.tar.gz"
-    sha256 "840b5ccbab080383d689e214842e5b91d7f3dc944b1f01ff38b5187409267778"
+    url "https://download.garden.io/core/0.14.4/garden-0.14.4-macos-amd64.tar.gz"
+    sha256 "672d359577388f6944ecfe38e48f374d3a68c592510a691287131c9b7bf05abc"
   end
 
   def install
